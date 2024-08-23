@@ -2,6 +2,7 @@ package com.prince.example.consumer;
 
 import com.prince.example.common.model.User;
 import com.prince.example.common.service.UserService;
+import com.prince.princerpc.proxy.ServiceProxyFactory;
 
 /**
  * @program: prince-rpc
@@ -11,7 +12,7 @@ import com.prince.example.common.service.UserService;
  **/
 public class EasyConsumerExample {
     public static void main(String[] args) {
-        UserService userService = null;
+        UserService userService = ServiceProxyFactory.getProxy(UserService.class);
         User user = new User();
         user.setName("prince");
         User serviceUser = userService.getUser(user);

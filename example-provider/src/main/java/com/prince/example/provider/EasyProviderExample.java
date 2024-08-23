@@ -1,7 +1,9 @@
 package com.prince.example.provider;
 
-import com.prince.example.common.model.User;
 import com.prince.example.common.service.UserService;
+import com.prince.princerpc.registry.LocalRegistry;
+import com.prince.princerpc.server.HttpServer;
+import com.prince.princerpc.server.VertxHttpServer;
 
 /**
  * @program: prince-rpc
@@ -12,6 +14,8 @@ import com.prince.example.common.service.UserService;
 public class EasyProviderExample {
 
     public static void main(String[] args) {
-
+        LocalRegistry.register(UserService.class.getName(),UserServiceImpl.class);
+        HttpServer vertxHttpServer = new VertxHttpServer();
+        vertxHttpServer.doStart(8080);
     }
 }
