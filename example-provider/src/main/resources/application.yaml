@@ -1,0 +1,4 @@
+rpc:
+  name: prince3
+  version: 3.0.0
+  serverPort: 8083

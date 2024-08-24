@@ -23,7 +23,7 @@
     </dependency>
     <dependency>
       <groupId>com.prince</groupId>
-      <artifactId>prince-rpc-easy</artifactId>
+      <artifactId>prince-rpc-core</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
